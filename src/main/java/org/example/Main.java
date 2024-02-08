@@ -99,7 +99,7 @@ public class Main {
         name.setInt(1, barcode);
         ResultSet res = name.executeQuery();
         String nn = null;
-        while (res.next() == true) {
+        while (res.next()) {
             String name1 = res.getString("name");
             nn = name1;
         }
@@ -108,7 +108,7 @@ public class Main {
         club_name.setString(1, nn);
         ResultSet res2 = club_name.executeQuery();
         String cc = null;
-        while (res2.next() == true) {
+        while (res2.next()) {
             String club_name2 = res2.getString("club");
             cc = club_name2;
         }
